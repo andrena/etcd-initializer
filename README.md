@@ -6,6 +6,8 @@ Example project to initialize an etcd docker container on startup with initial k
 
 * Start etcd container and load initial values: `docker-compose up -d --build`
 * Retrieve all values from etcd container: `docker exec -it etcd-initializer_etcd_1 etcdctl get --prefix ""`
+* Windows users: Be careful to keep the line endings as `LF` in [load-default-values.sh](./etcd/load-default-values.sh),
+otherwise you will get errors on execution.
 
 ## Setup
 
